@@ -56,38 +56,65 @@ h1{
 
 /*Container*/
 
-.flex_direction div{
-    width:200px;
-    height:200px;
+section div{
+    width:150px;
+    height:150px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
+.flexbox_properties{
+	/* display: flex;
+	flex-direction: column; */
 
+	width: 100%;
+	max-width: 960px;
+}
 
-.flex_direction div:nth-last-of-type(1){
+.column{
+	display: flex;
+	column-gap: 2em;
+	margin: 2%;
+	justify-content: space-around;
+}
+
+section div:nth-last-of-type(1){
     background-color: #ef476f;
 }
 
-.flex_direction div:nth-last-of-type(2){
+section div:nth-last-of-type(2){
     background-color: #ffd166;
 }
 
-.flex_direction div:nth-last-of-type(3){
+section div:nth-last-of-type(3){
     background-color: #06d6a0;
 }
-.flex_direction div:nth-last-of-type(4){
+section div:nth-last-of-type(4){
     background-color: #118ab2;
 }
-.flex_direction div:nth-last-of-type(5){
+section div:nth-last-of-type(5){
     background-color: #073b4c;
 }
 
-.flex_direction {
+.flex_row, .flex_column, .flex_column_reverse {
     display: flex;
-    
 }
 
-.flex_direction:hover{
-   flex-direction: column; 
-  
+.flex_column{
+	flex-direction: column;
+	align-items: center	;
+
+}
+
+
+
+/* .flex_column div, .flex_column_reverse div{
+
+} */
+
+
+.flex_column_reverse{
+	flex-direction: column-reverse;
 }
