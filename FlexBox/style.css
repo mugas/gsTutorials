@@ -71,6 +71,7 @@ h2{
 
 h3{
 	font-size: 1.1em;
+	text-align: center	;
 }
 /*Flex Display*/
 
@@ -79,8 +80,8 @@ article{
 	margin: 0 2% 0 2%;
 	flex-wrap: wrap;
 	gap: 2%;
-	height: 85vh;
 	justify-content: center;
+
 }
 
 section{
@@ -149,8 +150,9 @@ section div:nth-child(5){
 	display:flex;
 	flex-direction: column;
 	width: 48%;
-	height: 300px;
-	justify-content: space-around;
+	height: 250px;
+	margin: 7% 0 4% 0;
+	justify-content: space-evenly;
 	align-items: center;
 	align-content: center;
 	border: 1px solid #cbcbcb;
@@ -161,6 +163,56 @@ section div:nth-child(5){
 span{
 	display: block;
 }
+
+.justify_content{
+	display: flex;
+}
+
+.initial{
+	display: flex;
+	width:100%;
+	flex-direction: column;
+	height: 200px;
+	border: 1px solid #cbcbcb;
+	border-radius: 8px;
+	background: #fffcf6;
+}
+
+.flexing{
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+}
+
+.flexing div{
+	display: flex;
+	flex: inherit;
+	
+}
+
+ .flex_end{
+	 justify-content: flex-start;
+	/* animation: testing;
+	animation-duration: 4s;
+	animation-iteration-count: infinite; */
+	transition-property: justify-content; 
+	transition-duration: 3sec;
+	transition-delay: 4sec;	
+}  
+
+.flex_end_transform{
+	justify-content: flex-end;
+}
+
+@keyframes testing {
+	0%{
+		justify-content: flex-start;
+  }
+	100% {
+		justify-content: flex-end;
+	}
+	
+  }
 
 @keyframes row_to_rowreverse {
 	0%{
@@ -202,7 +254,7 @@ span{
 	}
 
 	article{
-		height: 50vh;
+		height: 90vh;
 	}
 
 	h3{
@@ -211,6 +263,7 @@ span{
 
 	.row_content, .row_reverse_content, .column_content, .column_reverse_content{
 		height: 270px;
+		margin:0;
 		align-items: center;
 		justify-content: space-around;
 		
@@ -232,4 +285,12 @@ span{
 		width: 80px;
 		height: 80px;
 	}
+}
+
+.column_reverse, .column, .row_reverse, .row{
+	
+	display: flex;
+	
+	height: 30%;
+	align-items: center;
 }
