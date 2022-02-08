@@ -164,8 +164,12 @@ span{
 	display: block;
 }
 
+/*Justify content*/
+
 .justify_content{
 	display: flex;
+	height: 600px;
+	gap:4%;
 }
 
 .initial{
@@ -191,20 +195,37 @@ span{
 }
 
  .flex_end{
-	 justify-content: flex-start;
-	/* animation: testing;
-	animation-duration: 4s;
-	animation-iteration-count: infinite; */
-	transition-property: justify-content; 
-	transition-duration: 3sec;
-	transition-delay: 4sec;	
-}  
+	justify-content: flex-start;
+/* 	animation: testing;
+	animation-duration: 10s; 
+	animation-fill-mode: forwards; */
+ }
 
-.flex_end_transform{
-	justify-content: flex-end;
-}
+@media (prefers-reduced-motion: no-preference) {
+	.flex_end_animation {
+	  animation: flex_end 4s forwards;
+	}
 
-@keyframes testing {
+	.flex_center_animation{
+		animation: flex_center 4s forwards;
+	}
+  }
+	
+
+
+
+/*Animations*/
+@keyframes flex_center {
+	0%{
+		justify-content: flex-start;
+  }
+	100% {
+		justify-content: center;
+	}
+	
+  } 
+
+ @keyframes flex_end {
 	0%{
 		justify-content: flex-start;
   }
@@ -212,7 +233,7 @@ span{
 		justify-content: flex-end;
 	}
 	
-  }
+  } 
 
 @keyframes row_to_rowreverse {
 	0%{

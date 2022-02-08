@@ -1,34 +1,34 @@
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        const square = entry.target.querySelector('.flex_end');
+        const firstFlex = document.querySelector('.flex_end');
+
 
         if (entry.isIntersecting) {
-            square.classList.add('flex_end_transform');
+            firstFlex.classList.add('flex_end_animation');
             return; // if we added the class, exit the function
         }
 
         // We're not intersecting, so remove the class!
-        square.classList.remove('flex_end_transform');
+        firstFlex.classList.remove('flex_end_animation');
     });
 });
 
 observer.observe(document.querySelector('.initial'));
 
 
-/* // Remove the transition class
-const square = document.querySelector('.flex_end');
-square.classList.remove('flex_end_transform');
-
-// Create the observer, same as before:
-const observer = new IntersectionObserver(entries => {
+const secondObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
+        const secondFlex = document.querySelector('.center');
+
+
         if (entry.isIntersecting) {
-            square.classList.add('flex_end_transform');
-            return;
+            secondFlex.classList.add('flex_center_animation');
+            return; // if we added the class, exit the function
         }
 
-        square.classList.remove('flex_end_transform');
+        // We're not intersecting, so remove the class!
+        secondFlex.classList.remove('flex_center_animation');
     });
 });
 
-observer.observe(document.querySelector('.initial')); */
+secondObserver.observe(document.querySelector('.initial'));
