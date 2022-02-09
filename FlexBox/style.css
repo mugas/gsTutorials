@@ -177,6 +177,7 @@ span{
 	width:100%;
 	flex-direction: column;
 	height: 200px;
+	justify-content: space-around;
 	border: 1px solid #cbcbcb;
 	border-radius: 8px;
 	background: #fffcf6;
@@ -191,6 +192,8 @@ span{
 .flexing div{
 	display: flex;
 	flex: inherit;
+	flex-basis: 3rem;
+	height: 3rem;
 	
 }
 
@@ -203,11 +206,20 @@ span{
 
 @media (prefers-reduced-motion: no-preference) {
 	.flex_end_animation {
-	  animation: flex_end 4s forwards;
+	  animation: flex_end 6s infinite;
 	}
 
 	.flex_center_animation{
-		animation: flex_center 4s forwards;
+		animation: flex_center 4s infinite;
+	}
+	.flex_space_between_animation{
+		animation: flex_space_between 4s infinite;
+	}
+	.flex_space_around_animation{
+		animation: flex_space_around 4s infinite;
+	}
+	.flex_space_evenly_animation{
+		animation: flex_space_evenly 4s infinite;
 	}
   }
 	
@@ -215,6 +227,34 @@ span{
 
 
 /*Animations*/
+@keyframes flex_space_evenly {
+	0%{
+		justify-content: flex-start;
+  }
+	100% {
+		justify-content: space-evenly;
+	}
+	
+  } 
+  @keyframes flex_space_around {
+	0%{
+		justify-content: flex-start;
+  }
+	100% {
+		justify-content: space-around;
+	}
+	
+  } 
+@keyframes flex_space_between {
+	0%{
+		justify-content: flex-start;
+  }
+	100% {
+		justify-content: space-between;
+	}
+	
+  } 
+
 @keyframes flex_center {
 	0%{
 		justify-content: flex-start;
