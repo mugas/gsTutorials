@@ -168,19 +168,25 @@ span{
 
 .justify_content{
 	display: flex;
-	height: 600px;
+	
 	gap:4%;
 }
 
 .initial{
 	display: flex;
 	width:100%;
+	margin-bottom: 4%;
 	flex-direction: column;
 	height: 200px;
 	justify-content: space-around;
 	border: 1px solid #cbcbcb;
 	border-radius: 8px;
 	background: #fffcf6;
+}
+
+.initial:nth-of-type(-n+2){
+	margin-top: 7%;
+
 }
 
 .flexing{
@@ -199,10 +205,12 @@ span{
 
  .flex_end{
 	justify-content: flex-start;
-/* 	animation: testing;
-	animation-duration: 10s; 
-	animation-fill-mode: forwards; */
  }
+
+ /*Align Item*/
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
 	.flex_end_animation {
@@ -221,12 +229,26 @@ span{
 	.flex_space_evenly_animation{
 		animation: flex_space_evenly 4s infinite;
 	}
+
+	.flex_align_end_animation{
+		animation: flex_align_end 4s infinite;
+	}
   }
 	
 
 
 
 /*Animations*/
+@keyframes flex_align_end {
+	0%{
+		align-items: flex-start;
+  }
+	100% {
+		align-items: flex-end;
+	}
+	
+  } 
+
 @keyframes flex_space_evenly {
 	0%{
 		justify-content: flex-start;
@@ -305,6 +327,7 @@ span{
 
 
 @media (min-width: 768px){
+	/*Headings*/
 	h1{
 		font-size: 3em;
 	}
@@ -314,13 +337,15 @@ span{
 		padding: 0px 0px 49px 0px;
 	}
 
-	article{
+	/* article{
 		height: 90vh;
-	}
+	} */
 
 	h3{
 		font-size: 2.1em;
 	}
+
+	/*Flex Direction*/
 
 	.row_content, .row_reverse_content, .column_content, .column_reverse_content{
 		height: 270px;
@@ -346,6 +371,18 @@ span{
 		width: 80px;
 		height: 80px;
 	}
+
+	/*Justify Content*/
+
+	.justify_content{
+		gap: 2%;
+		justify-content: center;
+	}
+
+	.initial{
+		width: 48%;
+	}
+
 }
 
 .column_reverse, .column, .row_reverse, .row{
@@ -354,4 +391,7 @@ span{
 	
 	height: 30%;
 	align-items: center;
+
+	
+
 }
