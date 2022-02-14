@@ -5,7 +5,10 @@ const observer = new IntersectionObserver(entries => {
         const flexSpaceBetween = document.querySelector('.space_between');
         const flexSpaceAround = document.querySelector('.space_around');
         const flexSpaceEvenly = document.querySelector('.space_evenly');
-
+        const flexAlignEnd = document.querySelector('.flex_align_end');
+        const flexAlignCenter = document.querySelector('.flex_align_center');
+        const flexAlignStretch = document.querySelector('.flex_align_stretch');
+        const flexAlignBaseline = document.querySelector('.flex_align_baseline');
 
         if (entry.isIntersecting) {
             flexEnd.classList.add('flex_end_animation');
@@ -13,6 +16,10 @@ const observer = new IntersectionObserver(entries => {
             flexSpaceBetween.classList.add('flex_space_between_animation');
             flexSpaceAround.classList.add('flex_space_around_animation');
             flexSpaceEvenly.classList.add('flex_space_evenly_animation');
+            flexAlignEnd.classList.add('flex_align_end_animation');
+            flexAlignCenter.classList.add('flex_align_center_animation');
+            flexAlignStretch.classList.add('flex_align_stretch_animation');
+            flexAlignBaseline.classList.add('flex_align_baseline_animation');
             return; // if we added the class, exit the function
         }
 
@@ -22,6 +29,10 @@ const observer = new IntersectionObserver(entries => {
         flexSpaceBetween.classList.remove('flex_space_between_animation');
         flexSpaceAround.classList.remove('flex_space_around_animation');
         flexSpaceEvenly.classList.remove('flex_space_evenly_animation');
+        flexAlignEnd.classList.remove('flex_align_end_animation');
+        flexAlignCenter.classList.remove('flex_align_center_animation');
+        flexAlignStretch.classList.remove('flex_align_stretch_animation');
+        flexAlignBaseline.classList.remove('flex_align_baseline_animation');
     });
 });
 

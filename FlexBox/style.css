@@ -210,8 +210,35 @@ span{
  /*Align Item*/
 
 
+ .align{
+	 flex-direction: row;
+ }
 
-
+ .align section{
+	 align-items: initial
+ }
+/*To make the animation work of the align items baseline I give different values to each square*/
+.flex_align_baseline :nth-child(1){
+	flex-basis: 1em;
+	height: 1em;
+}
+.flex_align_baseline :nth-child(2){
+	flex-basis: 4em;
+	height: 2em;
+}
+.flex_align_baseline :nth-child(3){
+	flex-basis: 3em;
+	height: 4em;
+}
+.flex_align_baseline :nth-child(4){
+	flex-basis: 5em;
+	height: 3em;
+}
+.flex_align_baseline :nth-child(5){
+	flex-basis: 2em;
+	height: 3em;
+}
+/*Animation*/
 @media (prefers-reduced-motion: no-preference) {
 	.flex_end_animation {
 	  animation: flex_end 6s infinite;
@@ -233,12 +260,53 @@ span{
 	.flex_align_end_animation{
 		animation: flex_align_end 4s infinite;
 	}
+
+	.flex_align_center_animation{
+		animation: flex_align_center 4s infinite;
+	}
+
+	.flex_align_stretch_animation{
+		animation: flex_align_stretch 4s infinite;
+	}
+	.flex_align_baseline_animation{
+		animation: flex_align_baseline 4s infinite;
+	}
   }
 	
 
 
 
 /*Animations*/
+
+@keyframes flex_align_center {
+	0%{
+		align-items: flex-start;
+  }
+	100% {
+		align-items:center;
+	}
+	
+  } 
+
+  @keyframes flex_align_stretch {
+	0%{
+		align-items: flex-start;
+  }
+	100% {
+		align-items:stretch;
+	}
+	
+  } 
+
+  @keyframes flex_align_baseline {
+	0%{
+		align-items: flex-start;
+  }
+	100% {
+		align-items: baseline;
+	}
+	
+  } 
 @keyframes flex_align_end {
 	0%{
 		align-items: flex-start;
