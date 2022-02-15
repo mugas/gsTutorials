@@ -217,6 +217,19 @@ span{
  .align section{
 	 align-items: initial
  }
+
+
+ /*Align content*/
+
+ .content{
+	 flex-direction: row;
+ }
+
+ .content section{
+	width: fit-content;
+	flex-wrap: wrap;
+ }
+
 /*To make the animation work of the align items baseline I give different values to each square*/
 .flex_align_baseline :nth-child(1){
 	flex-basis: 1em;
