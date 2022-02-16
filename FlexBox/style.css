@@ -230,6 +230,11 @@ span{
 	flex-wrap: wrap;
  }
 
+ .content h3{
+	 margin-top: 25%;
+ }
+
+
 /*To make the animation work of the align items baseline I give different values to each square*/
 .flex_align_baseline :nth-child(1){
 	flex-basis: 1em;
@@ -251,6 +256,26 @@ span{
 	flex-basis: 2em;
 	height: 3em;
 }
+
+
+.flex_align_content_end{
+	animation: flex_align_content_end  6s infinite;
+}
+
+.flex_align_content_center{
+	animation: flex_align_content_center  6s infinite;
+}
+
+.flex_align_content_stretch{
+	animation: flex_align_content_stretch  6s infinite;
+}
+.flex_align_content_space_between{
+	animation: flex_align_content_space_between  6s infinite;
+}
+.flex_align_content_space_evenly{
+	animation: flex_align_content_space_around  6s infinite;
+}
+
 /*Animation*/
 @media (prefers-reduced-motion: no-preference) {
 	.flex_end_animation {
@@ -290,6 +315,58 @@ span{
 
 
 /*Animations*/
+@keyframes flex_align_content_space_evenly {
+	0%{
+		align-content:initial;
+		
+  }
+	100% {
+		align-content:space-evenly;
+	}
+	
+  } 
+@keyframes flex_align_content_space_between {
+	0%{
+		align-content:initial;
+		
+  }
+	100% {
+		align-content:space-between;
+	}
+	
+  } 
+@keyframes flex_align_content_stretch {
+	0%{
+		align-content:initial;
+		
+  }
+	100% {
+		align-content:stretch;
+	}
+	
+  } 
+
+@keyframes flex_align_content_end {
+	0%{
+		align-content:initial;
+		
+  }
+	100% {
+		align-content:flex-end;
+	}
+	
+  } 
+
+  @keyframes flex_align_content_center {
+	0%{
+		align-content:initial;
+		
+  }
+	100% {
+		align-content:center;
+	}
+	
+  } 
 
 @keyframes flex_align_center {
 	0%{
