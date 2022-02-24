@@ -265,7 +265,14 @@ span{
  .content h3{
 	 margin-top: 25%;
  }
+ .justify_content section{
+	 display: flex;
+	 flex-wrap: wrap;
+ }
 
+ .justify_content section div{
+	 flex-basis: 7rem;
+ }
 
 /*To make the animation work of the align items baseline I give different values to each square*/
 .flex_align_baseline :nth-child(1){
@@ -307,7 +314,7 @@ span{
 .flex_align_content_space_between{
 	animation: flex_align_content_space_between  6s infinite;
 }
-.flex_align_content_space_evenly{
+.flex_align_content_space_evenly_animation{
 	animation: flex_align_content_space_evenly  6s infinite;
 }
 
@@ -535,8 +542,8 @@ span{
 	}
 	
   } 
-
-@keyframes flex_center {
+ 
+@keyframes flex_center{
 	0%{
 		justify-content: flex-start;
   }
