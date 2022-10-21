@@ -27,28 +27,27 @@ const alignContentEndAnimation = document.querySelector('.flex_align_content_end
 const alignContentCenterButton = document.querySelector('.align_content_center_button')
 const alignContentCenterAnimation = document.querySelector('.flex_align_content_center')
 const alignContentStretchButton = document.querySelector('.align_content_stretch_button')
-const alignContentStretchAnimation = document.querySelector('.flex_align_content_content_stretch')
+const alignContentStretchAnimation = document.querySelector('.flex_align_content_stretch')
 const alignContentSpaceBetweenButton = document.querySelector('.align_content_space_between_button')
-const alignContentSpaceBetweenAnimation = document.querySelector('.flex_align_space_between')
+const alignContentSpaceBetweenAnimation = document.querySelector('.flex_align_content_space_between')
 const alignContentSpaceEvenlyButton = document.querySelector('.align_content_space_evenly_button');
 const alignContentSpaceEvenlyAnimation = document.querySelector('.flex_align_content_space_evenly')
 
 
 alignContentEndButton.addEventListener('click', e => {
-    alignContentEndAnimation.classList.add('flex_align_content_space_evenly')
+    alignContentEndAnimation.classList.add('flex_align_content_end_animation')
 })
 alignContentCenterButton.addEventListener('click', e => {
-    alignContentCenterAnimation.classList.add('flex_align_content_space_evenly')
+    alignContentCenterAnimation.classList.add('flex_align_content_center_animation')
 })
 alignContentStretchButton.addEventListener('click', e => {
-    alignContentStretchAnimation.classList.add('flex_align_content_space_evenly')
+    alignContentStretchAnimation.classList.add('flex_align_content_stretch_animation')
 })
 alignContentSpaceBetweenButton.addEventListener('click', e => {
-    alignContentSpaceBetweenAnimation.classList.add('flex_align_content_space_evenly')
+    alignContentSpaceBetweenAnimation.classList.add('flex_align_content_space_between_animation')
 })
 
 alignContentSpaceEvenlyButton.addEventListener('click', e => {
-    console.log("gllo")
     alignContentSpaceEvenlyAnimation.classList.add('flex_align_content_space_evenly_animation')
 })
 

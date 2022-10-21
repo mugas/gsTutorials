@@ -48,6 +48,13 @@ table {
 	border-spacing: 0;
 }
 
+.explanation{
+	color:black;
+	text-align: center;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	font-size: 1rem;
+}
 
 /*Heading*/
 
@@ -138,7 +145,7 @@ section div{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-grow: 1;
+	
 	flex-shrink: 0;
 	flex-basis: 2em;
 	width: 30px;
@@ -223,13 +230,7 @@ span{
 	justify-content: flex-start;
 }
 
-.flexing div{
-	display: flex;
-	flex: inherit;
-	flex-basis: 3rem;
-	height: 3rem;
-	
-}
+
 
  .flex_end{
 	justify-content: flex-start;
@@ -270,9 +271,7 @@ span{
 	 flex-wrap: wrap;
  }
 
- .justify_content section div{
-	 flex-basis: 7rem;
- }
+
 
 /*To make the animation work of the align items baseline I give different values to each square*/
 .flex_align_baseline :nth-child(1){
@@ -296,31 +295,6 @@ span{
 	height: 3em;
 }
 
-.row_reverse_animation{
-	animation: row_to_rowreverse 6s infinite;
-}
-
-.flex_align_content_end{
-	animation: flex_align_content_end  6s infinite;
-}
-
-.flex_align_content_center{
-	animation: flex_align_content_center  6s infinite;
-}
-
-.flex_align_content_stretch{
-	animation: flex_align_content_stretch  6s infinite;
-}
-.flex_align_content_space_between{
-	animation: flex_align_content_space_between  6s infinite;
-}
-.flex_align_content_space_evenly_animation{
-	animation: flex_align_content_space_evenly  6s infinite;
-}
-
-.column_reverse_animation{
-	animation: row_to_column_reverse 4s infinite;
-}
 
 
 /*Footer*/
@@ -417,6 +391,32 @@ span{
 	.column_animation{
 		animation:row_to_column 2s infinite ;
 	}
+	
+.row_reverse_animation{
+	animation: row_to_rowreverse 6s infinite;
+}
+
+.flex_align_content_end_animation{
+	animation: flex_align_content_end  6s infinite;
+}
+
+.flex_align_content_center_animation{
+	animation: flex_align_content_center  6s infinite;
+}
+
+.flex_align_content_stretch_animation{
+	animation: flex_align_content_stretch  6s infinite;
+}
+.flex_align_content_space_between_animation{
+	animation: flex_align_content_space_between  6s infinite;
+}
+.flex_align_content_space_evenly_animation{
+	animation: flex_align_content_space_evenly  6s infinite;
+}
+
+.column_reverse_animation{
+	animation: row_to_column_reverse 4s infinite;
+}
   }
 	
 
@@ -607,13 +607,18 @@ span{
 	/* article{
 		height: 90vh;
 	} */
-
+	.explanation{
+		
+		
+		font-size: 3rem;
+	}
+	
 	h3{
 		font-size: 2.1em;
 	}
 
-	.longer-button{
-		width: 14em;
+	button .longer-button{
+		width: 7rem;
 	}
 	.content h3{
 		margin-top: 0;
@@ -621,6 +626,9 @@ span{
 	
 	button{
 		font-size: 1.6em;
+	}
+	section div{
+		flex-grow: 1;
 	}
 
 	/*Flex Direction*/
@@ -660,6 +668,16 @@ span{
 
 	.initial{
 		width: 48%;
+	}
+	.flexing div{
+		display: flex;
+		flex: inherit;
+		flex-basis: 3rem;
+		height: 3rem;
+		
+	}
+	.justify_content section div{
+		flex-basis: 7rem;
 	}
 
 }
